@@ -20,6 +20,7 @@ public class EmpController {
         return empService.queryByPage(rows, page);
     }
 
+    @RequestMapping("edit")
     public void edit(String oper, Emp emp, String id) {
         if (oper.equals("add")) {
             empService.add(emp.setId(UUID.randomUUID().toString()));
